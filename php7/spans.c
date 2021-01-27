@@ -4,7 +4,7 @@
 
 extern ZEND_DECLARE_MODULE_GLOBALS(hp)
 
-long tw_span_create(char *category, size_t category_len TSRMLS_DC)
+long tw_span_create(char *category, size_t category_len)
 {
     zval span, starts, stops;
     int idx;
@@ -64,7 +64,7 @@ static int tw_convert_to_string(zval *zv)
     return ZEND_HASH_APPLY_KEEP;
 }
 
-void tw_span_annotate(long spanId, zval *annotations TSRMLS_DC)
+void tw_span_annotate(long spanId, zval *annotations)
 {
     zval *span, *span_annotations, span_annotations_value, *zv;
     zend_string *key, *annotation_value;
