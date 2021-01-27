@@ -26,7 +26,7 @@ long tw_span_create(char *category, size_t category_len)
             idx = Z_LVAL_P(zv);
 
             if (idx > -1) {
-                tw_span_annotate_long(idx, "trunc", 1 TSRMLS_CC);
+                tw_span_annotate_long(idx, "trunc", 1);
 
                 return idx;
             }
